@@ -1,0 +1,21 @@
+admin_platform_role:
+    resource: |
+        alias: sylius.permission
+        section: admin
+        path: permissions
+        templates: PlatformAdminBundle:Crud
+        except: ['show']
+        redirect: index
+        grid: admin_platform_permission
+        permission: true
+        form:
+            options:
+                validation_groups: [platform_admin]
+        vars:
+            all:
+                subheader: sylius.ui.manage_user_role_permissions
+                templates:
+                    form: PlatformAdminBundle:Permission:_form.html.twig
+            index:
+                icon: lock
+    type: sylius.resource

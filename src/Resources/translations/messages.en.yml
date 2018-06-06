@@ -8,6 +8,8 @@ admin_platform:
             configuration:
                 header: Configuration
                 locales: Locales
+                permissions: Permissions
+                roles: Roles
                 admin_users: Administrators
     ui:
         admin_users: Administrators
